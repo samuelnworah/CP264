@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../School Projects/CP264/CP264/l01_given"
 		}
 	]
 }
