@@ -22,31 +22,18 @@ Version: 2025-01-09
 int mytype(char c) {
  int character = -1;
 
-//If character is a digit
- if (c >= '0' && c <= '9') {
+
+ if (c >= '0' && c <= '9') { //If character is a digit
   character = 0;
- }
-
-//If character is an arithmethic operator
- if (c == '*' || c == '+' || c == '-' || c == '/') {
+ } else if (c == '*' || c == '+' || c == '-' || c == '/') { //If character is an arithmethic operator
   character = 1;
- }
-
- //If character is a left parenthesis
- if (c == '(') {
+ } else if (c == '(') { //If character is a left parenthesis
   character = 2;
- }
-
- //If character is a right parenthesis
- if (c == ')') {
+ } else if (c == ')') { //If character is a right parenthesis
   character = 3;
- }
-
- //If character is an upper case english letter
-  if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
+ } else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) { //If character is an english letter
     character = 4;
   }
-  
    return character;
 }
 
@@ -75,11 +62,15 @@ char case_flip(char c) {
  *           otherwise -1.
  */
 int digit_to_int(char c) {
+
+ int digit = 0;
  
  if (c >= '0' && c <= '9') {
-  return c - '0';
+  digit = c - '0';
  } else {
-  return -1;
+  digit = -1;
  }
+
+ return digit;
 
 }
