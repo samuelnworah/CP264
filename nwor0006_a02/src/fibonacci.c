@@ -17,7 +17,21 @@ Version: 2025-01-22
  * @return - the nth Fibonacci number 
  */
 int recursive_fibonacci(int n) {
-// your implementation
+    int num = 0;
+
+    //base case for if n is 0 or 1
+    if (n == 0) {
+        num = 0;
+    } else if (n == 1) {
+        num = 1;
+
+    //recursive function
+    } else {
+        num = recursive_fibonacci(n - 2) + recursive_fibonacci(n - 1);
+    }
+    
+    return num;
+
 }
 
 /**
@@ -27,9 +41,32 @@ int recursive_fibonacci(int n) {
  * @param n - the n for F(n)
  * @return - the nth Fibonacci number 
  */
-int iterative_fibonacci(int n)
-{
-// your implementation
+int iterative_fibonacci(int n) {
+    int num = 0;
+
+    //base case checks if n is 0 or 1
+    if (n == 0) {
+        num = 0;
+    } else if (n == 1) {
+        num = 1;
+    }
+
+    //two previous numbers
+    // both need to be added to get current
+    //keep track of them
+    int previous_num_1 = 0;
+    int previous_num_2 = 1;
+
+    //recursive step
+    for (int i = 2; i <= n; i++) {
+        num = previous_num_1 + previous_num_2;
+        previous_num_1 = previous_num_2;
+        previous_num_2 = num;
+    }
+
+
+    return num;
+
 }
 
 /**
@@ -42,7 +79,17 @@ int iterative_fibonacci(int n)
  * @return - the nth Fibonacci number 
  */
 int dpbu_fibonacci(int *f, int n) {
-// your implementation
+    //point to index 0 and index 1
+    //set these to the base cases
+    *f = 0;
+    *(f + 1) = 1;
+
+    for (int i = 2; i < n + 1; i++) {
+        *(f + i) = *(f + i - 2) + *(f + i - 1);
+    }
+
+    return *(f + n);
+
 }
 
 /**
@@ -56,5 +103,17 @@ int dpbu_fibonacci(int *f, int n) {
  * @return - the nth Fibonacci number F(n).
  */
 int dptd_fibonacci(int *f, int n) {
-// your implementation
+    //base case setting index 1 and 0 to their base values
+    *f = 0;
+    *(f + 1) = 1;
+
+    if (n == 0) {
+        *f = 0;
+    } else if (n == 1) {
+        *(f + 1) = 1;
+    } else {
+        *(f + n) = dptd_fibonacci(f, n-2) + dpbu_fibonacci(f, n-1);
+    }
+
+    return *(f + n);
 }
