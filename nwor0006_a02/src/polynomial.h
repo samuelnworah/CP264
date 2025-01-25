@@ -1,5 +1,10 @@
 /*
- * your program signature
+--------------------------------------------------
+Project: polynomial header
+File:    polynomial.h
+Author:  Samuel Nworah 169060006
+Version: 2025-01-22
+--------------------------------------------------
  */ 
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
