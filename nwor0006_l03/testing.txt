@@ -11,12 +11,42 @@
  */
 ------------------
 Task 1
+Test: sum_integers
 
+Enter integers, one per line: 1
+Enter integers, one per line: 2
+Enter integers, one per line: 3
+Enter integers, one per line: q
+Sum: 6
 
+Test: sum_integers
+
+Enter integers, one per line: 1
+Enter integers, one per line: 2
+Enter integers, one per line: 3
+Enter integers, one per line: 4
+Enter integers, one per line: 5
+Enter integers, one per line: 6
+Enter integers, one per line: 7
+Enter integers, one per line: 8
+Enter integers, one per line: 9
+Enter integers, one per line: q
+Sum: 45
 ------------------
 Task 2
-
+Enter three comma-seperated integers: The integers were not properly entered.
+Enter three comma-seperated integers: 1,2,one
+The integers were not properly entered.
+Enter three comma-seperated integers: 1,2,tem
+The integers were not properly entered.
+Enter three comma-seperated integers: 1,2,3
+Sum: 6
 
 ---------------
 Task 3
-
+Enter 4 values for an array of int.
+1
+2
+3
+4
+{1, 2, 3, 4}
