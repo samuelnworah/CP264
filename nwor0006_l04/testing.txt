@@ -1,0 +1,42 @@
+/**
+ * -------------------------------------
+ * @file  testing.txt
+ * Lab 4 Test Results File
+ * -------------------------------------
+ * @author name, id, email
+ *
+ * @version 2024-02-03
+ *
+ * -------------------------------------
+ */
+
+
+strings_length(data, fp_short, fp_long, 100) with data:
+capacity: 3
+lines: 3
+strings:
+A short line
+A longer line
+A really long line that never seems to end and goes on and on
+
+    OK 
+
+strings_length(data, fp_short, fp_long, 0) with data:
+capacity: 3
+lines: 3
+strings:
+A short line
+A longer line
+A really long line that never seems to end and goes on and on
+
+    OK 
+
+strings_length(data, fp_short, fp_long, 15) with data:
+capacity: 3
+lines: 3
+strings:
+A short line
+A longer line
+A really long line that never seems to end and goes on and on
+
+    OK 

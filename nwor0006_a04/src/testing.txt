@@ -1,0 +1,16 @@
+------------------
+Test: grade
+
+grade(45.7): F
+grade(50.0): D
+grade(55.0): D+
+grade(59.0): D+
+grade(61.0): C
+grade(63.0): C
+grade(67.2): C+
+grade(72.0): B
+grade(76.0): B+
+grade(79.0): B+
+grade(80.5): A-
+grade(85.0): A
+grade(93.6): A+
